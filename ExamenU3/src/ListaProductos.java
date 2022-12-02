@@ -14,7 +14,7 @@ public class ListaProductos {
         }
     }
 
-    public void agregarProducto(int codigo, String nombre, double precio, int existencia){
+    public NodoProducto agregarProducto(int codigo, String nombre, double precio, int existencia){
         NodoProducto nuevo = new NodoProducto();
         nuevo.codigo = codigo;
         nuevo.nombre = nombre;
@@ -29,6 +29,7 @@ public class ListaProductos {
             nuevo.siguiente = null;
             fin = nuevo;
         }
+            return  nuevo;
     }
 
     public boolean buscarProducto(int codigo){

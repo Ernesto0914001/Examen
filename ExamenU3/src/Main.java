@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -12,18 +14,20 @@ public class Main {
         int codigo,folioVenta;
         int cantidad;
         double totalVenta = 0;
+        List<NodoProducto> invetario = new ArrayList<NodoProducto>();
+        List<NodoVenta> ventas = new ArrayList<NodoVenta>();
 
-        producto.agregarProducto(234,"Coca Cola 600ml",17.0,10);
-        producto.agregarProducto(345,"Jarrito 600ml",11.0,10);
-        producto.agregarProducto(456,"Cheetos Naranjas",15.0,10);
-        producto.agregarProducto(567,"Cheetos Azules",15.0,10);
-        producto.agregarProducto(678,"Cheetos rojos",15.0,10);
-        producto.agregarProducto(789,"Doritos",16.0,10);
-        producto.agregarProducto(890,"Chokis",17.0,10);
-        producto.agregarProducto(901,"Florentinas",17.0,10);
-        producto.agregarProducto(112,"Boiong",15.0,10);
-        producto.agregarProducto(123,"Red cola",15.0,10);
-
+        invetario.add(producto.agregarProducto(234,"Coca Cola 600ml",17.0,10));
+        invetario.add(producto.agregarProducto(345,"Jarrito 600ml",11.0,10));
+        invetario.add(producto.agregarProducto(456,"Cheetos Naranjas",15.0,10));
+        invetario.add(producto.agregarProducto(567,"Cheetos Azules",15.0,10));
+        invetario.add(producto.agregarProducto(678,"Cheetos rojos",15.0,10));
+        invetario.add(producto.agregarProducto(789,"Doritos",16.0,10));
+        invetario.add(producto.agregarProducto(890,"Chokis",17.0,10));
+        invetario.add(producto.agregarProducto(901,"Florentinas",17.0,10));
+        invetario.add(producto.agregarProducto(112,"Boiong",15.0,10));
+        invetario.add(producto.agregarProducto(123,"Red cola",15.0,10));
+        System.out.println();
         do {
             System.out.println("1.-Agregar venta \n" +
                     "2.- Hacer devolucion \n" +
